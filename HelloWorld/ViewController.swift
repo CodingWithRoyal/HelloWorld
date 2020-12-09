@@ -6,11 +6,17 @@
 //
 
 import Cocoa
+import WebKit
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var wv: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let req = URLRequest( url: URL( string: "https://google.com" )! )
+        wv.load( req )
 
         // Do any additional setup after loading the view.
     }
@@ -20,7 +26,6 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
+    
 }
 
